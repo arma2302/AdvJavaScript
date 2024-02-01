@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Module (6) JAVASCRIPT BASIC & DOM</h1>
+    <!-- 1 -->
+    <h2>Q.1 What is JavaScript. How to use it?</h2>
+    <p>JavaScript is a scripting language.also known as single threated language. which manuplutes the Dom(Document object Model).</p>
+    <!-- 2 -->
+    <h2>Q.2 How many type of Variable in JavaScript?</h2>
+    <p>There are 3 types of variables in js.</p>
+    <ul>
+      <li><b>var</b></li>
+      <dt>in var we can redeclare and reasign a variable.</dt>
+
+      <li><b>let</b></li>
+      <dt>in let we can not redeclare a variable.but we can reasign a value to a variable</dt>
+
+      <li><b>const</b></li>
+      <dt>in const we can not redeclare a variable.and we can not reasign a value to a variable</dt>
+    </ul>
+    <!-- 3 -->
+    <h2>Q.3 Define a Data Types in js?</h2>
+    <p>Two types of Datatypes</p>
+    <p>1.premetive</p>
+    <ol>
+      <li>Number</li>
+      <li>Null</li>
+      <li>Symbol</li>
+      <li>String</li>
+      <li>Undefined</li>
+      <li>BigInt</li>
+      <li>Boolean</li>
+    </ol>
+    <p>2.non-premetive</p>
+    <ol>
+      <li>Array</li>
+      <li>Object</li>
+    </ol>
+    <!-- 5 -->
+    <h2>Q.5 What the deference between undefined and undeclare in JavaScript?</h2>
+    <p>Undefined means variable is declared but value is not assigned to it.</p>
+    <p>undeclared means not declared anywhere in whole JavaScript.</p>
+    <!-- 6 -->
+    <h2>Q.6 Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.</h2>
+    <p>consol.log("There is no exercise better for the heart than reaching down and lifting people up.")</p>
+    <!-- 7 -->
+    <h2>Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</h2>
+    <img src="code-images/typeof-10.png" alt="" />
+    <!-- 8 -->
+    <h2>Q.8 Write a JavaScript Program to find the area of a triangle?</h2>
+    <img src="code-images/areaOfTriangle.png" alt="" />
+    <!-- 9 -->
+    <h2>Q.9 Write a JavaScript program to calculate days left until next Christmas?</h2>
+
+    <script>
+      // Q-6
+      console.log(" There is no exercise better for the heart than reaching down and lifting people up.");
+      // Q-7
+      let a = "10";
+      let b = 10;
+      a = parseInt(a);
+      if (a === b && a == b) {
+        console.log("its Equal");
+      } else {
+        console.log("its not Equal");
+      }
+      // Q.8 Write a JavaScript Program to find the area of a triangle?
+      // formual 1/2 base*height
+      let base = 2;
+      let height = 10;
+      let areaOfTriangle = 0.5 * (base * height);
+      console.log(areaOfTriangle);
+    </script>
+  </body>
+</html>
