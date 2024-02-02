@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance JavaScript Q&A</title>
+  </head>
+  <body>
+    <!-- 1 -->
+    <h2>1. Can you provide a brief overview of the history of JavaScript and its significance in web development?</h2>
+    <p>Brendan Eich first developed JavaScript, a computer language, in about ten days in May 1995.</p>
+    <p>known as Mocha before. then livescript and now known as JavaScript</p>
+    <p>created to be used on client side websites</p>
+    <p>single threaded language</p>
+    <p>dynamic</p>
+    <p>manipulates DOM (HTML &CSS)</p>
+    <!-- 2 -->
+    <h2>2. What are the fundamental building blocks of JavaScript?</h2>
+    <!-- 3 -->
+    <h2>3. Explain the basic syntax of JavaScript.</h2>
+    <p>between script tag</p>
+    <p>let a= 10 // variable declaration</p>
+    <p>consol.log("hello") // console printing</p>
+    <!-- 4 -->
+    <h2>4. How does JavaScript differ from other programming languages?</h2>
+    <!-- 5 -->
+    <h2>5.What is Block in JS?</h2>
+    <p>code written between {} are known as block in js</p>
+    <!-- 6 -->
+    <h2>6.What is the diffrenece between undefined and Not Defined?</h2>
+    <p>undefined means variable is declared but value is not assigned to it</p>
+    <p>Not Defined means not declared in js</p>
+    <!-- 7 -->
+    <h2>7.What are the best practices to write clean and efficient JavaScript code?</h2>
+    <p>To write clean and efficient JavaScript code is to comment out each and everything for better understanding .</p>
+    <!-- 8 -->
+    <h2>What are the differences between var, let, and const in JavaScript for declaring variables?</h2>
+    <p>There are 3 types of variables in js.</p>
+    <ul>
+      <li><b>var</b></li>
+      <dt>in var we can redeclare and reasign a variable.</dt>
+
+      <li><b>let</b></li>
+      <dt>in let we can not redeclare a variable.but we can reasign a value to a variable</dt>
+
+      <li><b>const</b></li>
+      <dt>in const we can not redeclare a variable.and we can not reasign a value to a variable</dt>
+    </ul>
+    <!-- 9 -->
+    <h2>Explain the difference between primitive and reference types in JavaScript. Provide examples for each.</h2>
+    <p>premetive data types are pass by value.</p>
+    <p>non-premetive data-types are pass by reference</p>
+    <p>
+      the difference is : <b>in premetive data types</b> the values is copied and a new memory is allocated to a variable. whereas <b>in non-premetive data types</b> only reference is assigned to a variable if we change any value in a
+      variable then all the other variables referenced with that is also changes.
+    </p>
+    <!-- 10 -->
+    <h2>How would you convert a string to a number and vice versa in JavaScript?</h2>
+    <p>to conevert a string into number we can use <b>parsInt()</b></p>
+    <p>to convert a number into string we can use <b> toString()</b></p>
+    <!-- 11 -->
+    <h2>What does the splice() method do in JavaScript arrays?</h2>
+    <p>splice(start, deleteCount, item1)</p>
+    <p>The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements</p>
+    <!-- 12 -->
+    <h2>How would you check if an element exists in an array in JavaScript without using loops?</h2>
+    <p>The includes() method takes in two parameters – item and fromIndex.</p>
+    <!-- 13 -->
+    <h2>Explain the difference between slice() and splice() methods in JavaScript arrays.</h2>
+    <p><b>slice()</b>This method is used to get a new array by selecting a sub-array of a given array. <br />The changes do not reflect in the original array.</p>
+    <p><b>splice()</b>This method is used to add/remove an item from the given array. <br />The changes reflect in the original array</p>
+    <!-- 14 -->
+    <h2>How do you add a new property to an existing JavaScript object?</h2>
+    <p>object.new_property = new_value</p>
+    <script>
+      // number and string convert////////////////////////
+
+      let a = 10;
+      console.log(typeof a);
+      console.log(typeof a.toString());
+      // console.log(typeof a);
+      b = "arma";
+      console.log(typeof b);
+      console.log(typeof parseInt(b));
+
+      // array includes()////////////////////////////////
+
+      let array = [10, 20, "arma"];
+      console.log(array);
+      console.log(array.includes("arma", 2));
+
+      // foreach/////////////////////////////////////////
+
+      array.forEach((element) => {
+        console.log(element);
+      });
+
+      // splice method //////////////////////////////////
+      let name = ["arma", "rahul"];
+      name.splice(1, 0, "deepak", "tarun");
+
+      // slice method ////////////////////////////////////
+      sub_name_array = name.slice(2);
+      console.log(name);
+      console.log(sub_name_array);
+
+      // add new property to an object ///////////////////
+      let details = { name: "arma", age: 21 };
+      console.log(details);
+      details.grade = "B";
+      console.log(details);
+    </script>
+  </body>
+</html>
