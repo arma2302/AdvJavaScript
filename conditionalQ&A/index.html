@@ -5,80 +5,232 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      body {
+        background-image: url(https://cdn.dribbble.com/users/2399335/screenshots/14689261/d_glass-morphism_card_1080p_4x.png);
+        background-attachment: fixed;
+      }
+      .container {
+        background-color: #9a8c986c;
+        margin: 0 auto;
+        padding: 20px;
+        width: 60%;
+        /* height: 50%; */
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgb(197, 189, 195);
+        backdrop-filter: blur(8.9px);
+        border: 1px solid rgba(10, 170, 244, 0.37);
+      }
+      div {
+        border-bottom: 2px solid #222;
+        padding: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
       img {
         width: 500px;
       }
     </style>
   </head>
   <body>
-    <h1>Module (6) JAVASCRIPT BASIC & DOM</h1>
-    <!-- 1 -->
-    <h2>Q.1 What is JavaScript. How to use it?</h2>
-    <p>JavaScript is a scripting language.also known as single threated language. which manuplutes the Dom(Document object Model).</p>
-    <!-- 2 -->
-    <h2>Q.2 How many type of Variable in JavaScript?</h2>
-    <p>There are 3 types of variables in js.</p>
-    <ul>
-      <li><b>var</b></li>
-      <dt>in var we can redeclare and reasign a variable.</dt>
+    <div class="container">
+      <h1>Module (6) JAVASCRIPT BASIC & DOM</h1>
+      <!-- 1 -->
+      <div>
+        <h2>Q.1 What is JavaScript. How to use it?</h2>
+        <p>JavaScript is a scripting language.also known as single threated language. which manuplutes the Dom(Document object Model).</p>
+      </div>
+      <!-- 2 -->
+      <div>
+        <h2>Q.2 How many type of Variable in JavaScript?</h2>
+        <p>There are 3 types of variables in js.</p>
+        <ul>
+          <li><b>var</b></li>
+          <dt>in var we can redeclare and reasign a variable.</dt>
 
-      <li><b>let</b></li>
-      <dt>in let we can not redeclare a variable.but we can reasign a value to a variable</dt>
+          <li><b>let</b></li>
+          <dt>in let we can not redeclare a variable.but we can reasign a value to a variable</dt>
 
-      <li><b>const</b></li>
-      <dt>in const we can not redeclare a variable.and we can not reasign a value to a variable</dt>
-    </ul>
-    <!-- 3 -->
-    <h2>Q.3 Define a Data Types in js?</h2>
-    <p>Two types of Datatypes</p>
-    <p>1.premetive</p>
-    <ol>
-      <li>Number</li>
-      <li>Null</li>
-      <li>Symbol</li>
-      <li>String</li>
-      <li>Undefined</li>
-      <li>BigInt</li>
-      <li>Boolean</li>
-    </ol>
-    <p>2.non-premetive</p>
-    <ol>
-      <li>Array</li>
-      <li>Object</li>
-    </ol>
-    <!-- 5 -->
-    <h2>Q.5 What the deference between undefined and undeclare in JavaScript?</h2>
-    <p>Undefined means variable is declared but value is not assigned to it.</p>
-    <p>undeclared means not declared anywhere in whole JavaScript.</p>
-    <!-- 6 -->
-    <h2>Q.6 Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.</h2>
-    <p>consol.log("There is no exercise better for the heart than reaching down and lifting people up.")</p>
-    <!-- 7 -->
-    <h2>Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</h2>
-    <img src="code-images/typeof-10.png" alt="" />
-    <!-- 8 -->
-    <h2>Q.8 Write a JavaScript Program to find the area of a triangle?</h2>
-    <img src="code-images/areaOfTriangle.png" alt="" />
-    <!-- 9 -->
-    <h2>Q.9 Write a JavaScript program to calculate days left until next Christmas?</h2>
-    <!-- 10 -->
-    <h2>Q.10 What is Condition Statement?</h2>
-    <p>Conditional statements in Programming, also known as decision-making statements, allow a program to perform different actions based on whether a certain condition is true or false.</p>
-    <p>
-      Following are the condiotions in js : <br />1.if <br />
-      2.if else<br />
-      3.if else if <br />
-      4. switch case
-    </p>
-    <!-- 11 -->
-    <h2>Q.11 Find circumference of Rectangle formula : C = 4 * a ?</h2>
-    <img src="code-images/circumference.png" alt="" />
-    <!-- 12 -->
-    <h2>Q.12 WAP to convert years into days and days into years?</h2>
+          <li><b>const</b></li>
+          <dt>in const we can not redeclare a variable.and we can not reasign a value to a variable</dt>
+        </ul>
+      </div>
+      <!-- 3 -->
+      <div>
+        <h2>Q.3 Define a Data Types in js?</h2>
+        <p>Two types of Datatypes</p>
+        <p>1.premetive</p>
+        <ol>
+          <li>Number</li>
+          <li>Null</li>
+          <li>Symbol</li>
+          <li>String</li>
+          <li>Undefined</li>
+          <li>BigInt</li>
+          <li>Boolean</li>
+        </ol>
+        <p>2.non-premetive</p>
+        <ol>
+          <li>Array</li>
+          <li>Object</li>
+        </ol>
+      </div>
+      <!-- 5 -->
+      <div>
+        <h2>Q.5 What the deference between undefined and undeclare in JavaScript?</h2>
+        <p>Undefined means variable is declared but value is not assigned to it.</p>
+        <p>undeclared means not declared anywhere in whole JavaScript.</p>
+      </div>
+      <!-- 6 -->
+      <div>
+        <h2>Q.6 Using console.log() print out the following statement: The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.</h2>
+        <p>consol.log("There is no exercise better for the heart than reaching down and lifting people up.")</p>
+      </div>
+      <!-- 7 -->
+      <div>
+        <h2>Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?</h2>
+        <img src="code-images/typeof-10.png" alt="" />
+      </div>
+      <!-- 8 -->
+      <div>
+        <h2>Q.8 Write a JavaScript Program to find the area of a triangle?</h2>
+        <img src="code-images/areaOfTriangle.png" alt="" />
+      </div>
+      <!-- 9 -->
+      <div>
+        <h2>Q.9 Write a JavaScript program to calculate days left until next Christmas?</h2>
+      </div>
+      <!-- 10 -->
+      <div>
+        <h2>Q.10 What is Condition Statement?</h2>
+        <p>Conditional statements in Programming, also known as decision-making statements, allow a program to perform different actions based on whether a certain condition is true or false.</p>
+        <p>
+          Following are the condiotions in js : <br />1.if <br />
+          2.if else<br />
+          3.if else if <br />
+          4. switch case
+        </p>
+      </div>
+      <!-- 11 -->
+      <div>
+        <h2>Q.11 Find circumference of Rectangle formula : C = 4 * a ?</h2>
+        <img src="code-images/circumference.png" alt="" />
+      </div>
+      <!-- 12 -->
+      <div>
+        <h2>Q.12 WAP to convert years into days and days into years?</h2>
+      </div>
+      <!-- 13 -->
+      <div>
+        <h2>Q.13 Convert temperature Fahrenheit to Celsius?</h2>
+        <img src="code-images/fc.png" alt="" />
+      </div>
 
+      <!-- 14 -->
+      <div>
+        <h2>Q.14 Write a JavaScript exercise to get the extension of a filename.?</h2>
+        <img src="code-images/filename.png" alt="" />
+      </div>
+      <!-- 15 -->
+      <div>
+        <h2>Q.15 What is the result of the expression (5 &gt; 3 && 2 &lt; 4)?</h2>
+        <img src="code-images/expression.png" alt="" />
+      </div>
+
+      <!-- 16 -->
+      <div>
+        <h2>Q.16 What is the result of the expression (true && 1 && "hello")?</h2>
+        <img src="code-images/expression.png" alt="" />
+      </div>
+      <!-- 17 -->
+      <div>
+        <h2>Q.17 What is the result of the expression true && false || false && true? Q</h2>
+        <img src="code-images/or-expression.png" alt="" />
+      </div>
+      <!-- 18 -->
+      <div>
+        <h2>Q.18 What is a Loop and Switch Case in JavaScript define that ?</h2>
+
+        <ul>
+          <li>for loop</li>
+          <li>for of</li>
+          <li>for in</li>
+          <li>while</li>
+          <li>do while</li>
+        </ul>
+      </div>
+      <!-- 19 -->
+      <div>
+        <h2>Q.19 What is the use of is Nan function?</h2>
+        <p>to whether its number or not</p>
+      </div>
+      <!-- 20 -->
+      <div>
+        <h2>Q.20 What is the difference between && and || in JavaScript?</h2>
+        <p>following is the difference between && and ||:</p>
+        <p>
+          &&: true && true = true <br />
+          true && false = false <br />
+          fasle && false = false <br />
+          false && true = false <br />
+        </p>
+        <p>
+          ||: true || true = true <br />
+          true || false = true <br />
+          fasle || false = false <br />
+          false || true = true <br />
+        </p>
+      </div>
+      <!-- 22 -->
+      <div>
+        <h2>Q.22 Check Number Is Positive or Negative in JavaScript?</h2>
+        <img src="code-images/positive.png" alt="" />
+      </div>
+      <!-- 23 -->
+      <div>
+        <h2>Q.23 Find the Character Is Vowel or Not ?</h2>
+        <img src="code-images/vowel.png" alt="" />
+      </div>
+      <!-- 24 -->
+      <div>
+        <h2>Q.24 Write to check whether a number is negative, positive or zero?</h2>
+        <img src="code-images/zero.png" alt="" />
+      </div>
+      <!-- 25 -->
+      <div>
+        <h2>Q.25 Write to find number is even or odd using ternary operator in JS?</h2>
+        <img src="code-images/even-odd.png" alt="" />
+      </div>
+      <!-- 26 -->
+      <div>
+        <h2>Q.26 Write find maximum number among 3 numbers using ternary operator in JS?</h2>
+        <img src="code-images/maximum.png" alt="" />
+      </div>
+      <!-- 27 -->
+      <div>
+        <h2>Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?</h2>
+        <img src="code-images/minimun.png" alt="" />
+      </div>
+
+      <!-- 29 -->
+      <div>
+        <h2>
+          Q.29 Write to show <br />
+          i. Monday to Sunday using switch case in JS? <br />
+        </h2>
+        <img src="code-images/days.png" alt="" />
+        <h2>ii. Vowel or Consonant using switch case in JS?</h2>
+        <img src="code-images/constant.png" alt="" />
+      </div>
+    </div>
+    <!-- script starts here -->
     <script>
       // Q-6
       console.log(" There is no exercise better for the heart than reaching down and lifting people up.");
+
       // Q-7
       let a = "10";
       let b = 10;
@@ -88,20 +240,168 @@
       } else {
         console.log("its not Equal");
       }
+
       // Q.8 Write a JavaScript Program to find the area of a triangle?
       // formual 1/2 base*height
       let base = 2;
       let height = 10;
       let areaOfTriangle = 0.5 * (base * height);
       console.log(areaOfTriangle);
+
       // Q.11 Find circumference of Rectangle formula : C = 4 * a ?
       function circumference(a) {
         return 4 * a;
       }
       a = 5;
       console.log("circumference of a is " + circumference(a));
+
       // Q.12 WAP to convert years into days and days into years?
-      new Date();
+
+      // Q.13 Convert temperature Fahrenheit to Celsius?
+
+      // formual c=(f-32)*5/9;
+      // let f = parseInt(prompt("enter value", "10"));
+      let f = 10;
+
+      function calsius(f) {
+        return (parseInt(f - 32) * 5) / 9;
+      }
+      console.log(f + " fahrenheit is equal to " + calsius(f));
+
+      // Q.14 Write a JavaScript exercise to get the extension of a filename.?
+      let filename = "index.html";
+      console.log(filename.split(".").pop());
+      filename = "main.js";
+      console.log(filename.split(".").pop());
+
+      // Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+      if (5 > 3 && 2 < 4) {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+
+      // Q.16 What is the result of the expression (true && 1 && "hello")?
+      if (true && 1 && "hello") {
+        console.log(true);
+      } else {
+        console.log(false);
+      }
+
+      // Q.17 What is the result of the expression true && false || false && true?
+      if ((true && false) || (false && true)) {
+        console.log("true");
+      } else {
+        console.log("false");
+      }
+
+      // Q.22 Check Number Is Positive or Negative in JavaScript?
+      let value = 20;
+      if (value > 0) {
+        console.log("it is positive");
+      } else {
+        console.log("it is negetive");
+      }
+
+      // Q.23 Find the Character Is Vowel or Not ?
+      let result;
+      let n = "O";
+      function vowel(n) {
+        if (n == "A" || n == "E" || n == "I" || n == "O" || n == "U") {
+          result = true;
+        } else {
+          result = false;
+        }
+        return result;
+      }
+      console.log(vowel(n));
+
+      // Q.24 Write to check whether a number is negative, positive or zero?
+
+      let num = -20;
+      if (num > 0) {
+        console.log("positive");
+      } else if (num == 0) {
+        console.log("zero");
+      } else {
+        console.log("negetive");
+      }
+
+      // Q.25 Write to find number is even or odd using ternary operator in JS?
+      let number = 10;
+      number % 2 == 0 ? console.log("even") : console.log("odd");
+
+      // Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+      let num1 = 10;
+      let num2 = 9;
+      let num3 = 20;
+
+      num1 >= num2 && num1 >= num3 ? console.log(num1 + " is largest") : num2 >= num1 && num2 >= num3 ? console.log(num2 + " is largest ") : console.log(num3 + " is largest ");
+
+      // Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?
+      // let num1 = 10;
+      // let num2 = 9;
+      // let num3 = 20;
+
+      num1 <= num2 && num1 <= num3 ? console.log(num1 + " is smallest") : num2 <= num1 && num2 <= num3 ? console.log(num2 + " is smallest ") : console.log(num3 + " is smallest ");
+
+      // cdondition ? log : condition ? log : log ---------> syntax of ternary operator
+
+      //  Q.29 Write to show
+      // i. Monday to Sunday using switch case in JS?
+
+      // let day = Number(prompt("enter a day number", "0"));
+      let day = 6;
+      switch (day) {
+        case 0:
+          day = "sunday";
+          break;
+        case 1:
+          day = "Monday";
+          break;
+        case 2:
+          day = "Tuesday";
+          break;
+        case 3:
+          day = "Wednesday";
+          break;
+        case 4:
+          day = "Thursday";
+          break;
+        case 5:
+          day = "Friday";
+          break;
+        case 6:
+          day = "Saturday";
+      }
+      console.log("today is " + day);
+      console.log(new Date().getDay());
+
+      // ii. Vowel or Consonant using switch case in JS?
+      let choice = "L";
+      switch (choice) {
+        case "A":
+          choice = "A is vowel";
+          // console.log(choice + " is vowel");
+          break;
+        case "E":
+          choice = "E is vowel";
+          break;
+        case "I":
+          choice = "I is vowel";
+          break;
+        case "O":
+          choice = "O is vowel";
+          break;
+        case "U":
+          choice = "U is vowel";
+          break;
+        default:
+          console.log(choice + " is a constant");
+          break;
+      }
+      // console.log(choice);
+      console.log(choice);
     </script>
   </body>
 </html>
