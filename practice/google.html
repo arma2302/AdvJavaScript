@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Document</title>
+    <style>
+      img {
+        width: 30px;
+      }
+      .serach {
+        width: 100%;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 auto;
+        width: 50%;
+        background-color: aqua;
+        padding: 10px;
+      }
+      #inp {
+        position: relative;
+        padding: 10px 20px;
+        width: 200px;
+      }
+      #cross {
+        top: 20px;
+        position: absolute;
+        left: 18%;
+        width: 14px;
+        display: none;
+      }
+      h1 {
+        text-align: center;
+      }
+      .inp-flex {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Google Search</h1>
+    <div class="flex">
+      <div class="inp-flex">
+        <input type="text" placeholder="serach" id="inp" />
+        <img src="../cross.png.crdownload" alt="" id="cross" />
+      </div>
+      <div class="serach"><img src="../search.png" alt="" id="search" /></div>
+    </div>
+    <!-- script start here -->
+    <script>
+      let input = document.getElementById("inp");
+
+      // document.getElementById("inp").addEventListener("click", function clearicon() {
+      //   if (document.getElementById("inp").value != " ") {
+      //     document.getElementById("cross").style.display = "block";
+      //     console.log(inp.value);
+      //   } else {
+      //     document.getElementById("cross").style.display = "none";
+      //   }
+      // });
+      window.addEventListener("keydown", function clear() {
+        if (document.getElementById("inp").value.length > 0) {
+          document.getElementById("cross").style.display = "block";
+          console.log("if");
+        }
+      });
+      document.getElementById("cross").addEventListener("click", function clear() {
+        console.log(input.value);
+        input.value = "";
+      });
+      document.getElementById("search").addEventListener("click", function search() {
+        window.location.href = `https://www.google.com/search?q=${input.value}`;
+      });
+    </script>
+  </body>
+</html>

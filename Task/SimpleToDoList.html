@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple To Do List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+      }
+      body {
+        background-color: #c4dae3;
+      }
+      .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: black;
+        border: 2px solid #000000;
+
+        text-align: center;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        align-items: center; */
+        background-image: url(https://c8.alamy.com/comp/M42M91/to-do-list-icon-with-hand-drawn-text-seamless-pattern-background-business-M42M91.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+      }
+      .heading-box {
+        font-size: 20px;
+        margin: 10px 0;
+        /* border: 2px solid #000000; */
+        /* backdrop-filter: blur(10px); */
+      }
+      #to-do-wrapper {
+        margin: 50px auto;
+        height: 500px;
+        width: 70%;
+        backdrop-filter: blur(12px);
+        padding: 20px;
+        border: 2px solid #c4dae3;
+        box-shadow: -10px 10px 0px rgba(33, 33, 33, 1), -20px 20px 0px rgba(33, 33, 33, 0.7), -30px 30px 0px rgba(33, 33, 33, 0.4), -40px 40px 0px rgba(33, 33, 33, 0.1);
+      }
+      .input-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+        border: 2px solid #000000;
+
+        padding: 20px 0;
+        /* backdrop-filter: blur(10px); */
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      }
+      #AddtaskInp {
+        width: 80%;
+        padding: 10px;
+      }
+      button {
+        font-size: 18px;
+      }
+      #BtnAddTask {
+        padding: 9px 15px;
+        border: none;
+        background-color: #000000;
+        color: #c4dae3;
+        border: 2px solid #c4dae3;
+      }
+      #BtnAddTask:hover {
+        color: #000000;
+        border: 2px solid #000000;
+        background-color: #c4dae3;
+        box-shadow: 0px 50px 100px -20px rgba(50, 50, 93, 0.25), 0px 30px 60px -30px rgba(0, 0, 0, 0.3), inset 0px -2px 6px 0px rgba(10, 37, 64, 0.35);
+      }
+      #task-wraapper {
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; */
+        width: 100%;
+        /* backdrop-filter: blur(10px); */
+        margin: 20px 0;
+      }
+      .task-add-input {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        border: 2px solid #000000;
+      }
+      #task-inp {
+        width: 600px;
+        padding: 10px;
+      }
+      #checkbox {
+        height: 20px;
+        width: 20px;
+      }
+      #edit,
+      #dlt {
+        border: none;
+        padding: 10px 30px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        background-color: #c4dae3;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div id="to-do-wrapper">
+          <div class="heading-box"><h1>To Do List</h1></div>
+          <div class="input-box">
+            <input type="text" name="" id="AddtaskInp" placeholder="Add Something" />
+            <button id="BtnAddTask">Add task</button>
+          </div>
+          <div id="task-wraapper">
+            <!-- <div class="task-add-input">
+              <input type="checkbox" name="" id="checkbox" />
+              <input type="text" id="task-inp" disabled />
+
+              <button id="edit">Edit</button>
+              <button id="dlt">Delete</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Script starts here -->
+    <script>
+      let BtnAddTask = document.getElementById("BtnAddTask");
+      BtnAddTask.addEventListener("click", function ToDoList() {
+        // create div element
+        let div = document.createElement("div");
+        div.innerHTML = ` <div class="task-add-input">
+              <input type="checkbox" name="" id="checkbox" />
+              <input type="text" id="task-inp" disabled />
+
+              <button id="edit"onclick="edit(this)">Edit</button>
+              <button id="dlt">Delete</button>
+            </div>`;
+        //   append div to parent element
+        document.getElementById("task-wraapper").appendChild(div);
+      });
+      let editToggle = true;
+      function edit(a9) {
+        if (editToggle) {
+          console.log("if first is callled");
+          console.log(a.previousElementSibling);
+          if ((a.previousElementSibling = "disabled")) {
+            console.log(a.previousElementSibling);
+            a.previousElementSibling.removeAttribute("disabled");
+            document.getElementById("edit").innerText = "Save";
+          }
+          // else {
+          //   a.previousElementSibling.setAttribute("disabled");
+          //   document.getElementById("edit").innerText = "Edit";
+          // }
+        } else {
+          document.getElementById("task-inp").setAttribute("disabled");
+          console.log("else is callled");
+          document.getElementById("edit").innerText = "Edit";
+        }
+        editToggle = !editToggle;
+      }
+
+      let greet = () => {
+        console.log("helo");
+      };
+    </script>
+  </body>
+</html>

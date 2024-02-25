@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>functions in html</h1>
+  </body>
+  <script>
+    // named function
+
+    function hello() {
+      console.log("HELLO I AM NAMED FUNCTION");
+    }
+    hello();
+
+    //annonymus function
+
+    let annonymus = function () {
+      console.log("annonymus function");
+    };
+    annonymus();
+    // IIFE
+
+    // (function () {
+    //   console.log("IIFE ");
+    // })();
+
+    // arrow function
+    let arrow = () => {
+      console.log("arrow function");
+    };
+
+    arrow();
+
+    // return value
+
+    function returnvalue(a, b, c) {
+      return a + b + c;
+    }
+    console.log(returnvalue(10, 10, 10));
+
+    // anonymous function returing a value
+
+    let anonymousreturn = (a, c) => {
+      return a * a + c;
+    };
+    console.log(anonymousreturn(10, 30));
+
+    // IIFE
+    (function (c, d) {
+      return c * d;
+    })(10, 20);
+  </script>
+</html>

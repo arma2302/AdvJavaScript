@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetAttribute</title>
+    <style>
+      .h1 {
+        font-size: 20px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="p" style="border: 1px solid #222">arma shaikh</p>
+      <p id="get"></p>
+    </div>
+    <button onclick="add()">add</button>
+    <!-- script -->
+    <script>
+      function add() {
+        let div = document.querySelector("div");
+        let node = document.createElement("h1");
+        let textnode = document.createTextNode("hi this is append child with setAttribute() method");
+        node.appendChild(textnode);
+        node.setAttribute("class", "h1");
+        div.appendChild(node);
+        let p = document.querySelector("p").getAttribute("style");
+        document.getElementById("get").innerHTML = p;
+      }
+    </script>
+  </body>
+</html>
