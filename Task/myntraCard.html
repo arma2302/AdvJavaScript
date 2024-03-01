@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyntraCard</title>
+    <link rel="shortcut icon" href="myntra-logo-brandlogos.net_.png" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+      }
+      img {
+        width: 100%;
+      }
+      .container {
+        width: 90%;
+        padding: 10px;
+        margin: 0 auto;
+        background-color: aliceblue;
+      }
+      #row {
+        display: flex;
+        justify-content: start;
+        gap: 40px;
+        align-items: center;
+        flex-wrap: wrap;
+        /* background-color: #d222d2; */
+      }
+      .col-25 {
+        width: 22%;
+      }
+      .sub-title {
+        font-size: 14px;
+        opacity: 0.5;
+      }
+      .card-img {
+        overflow: hidden;
+      }
+      .card-img img {
+        transition: all 0.3s ease;
+      }
+      .card-img img:hover {
+        transform: scale(1.1);
+      }
+      .pricing {
+        font-weight: 600;
+      }
+      .card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .numbers a {
+        text-decoration: none;
+        background-color: black;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="container">
+        <!-- The row div is used for the main layout of elements inside the container -->
+        <div id="row"></div>
+        <!-- numbers -->
+        <div class="numbers">
+          <a href="#" page>1</a>
+          <a href="#" id="page2" onclick="showPage2()">2</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- External JavaScript file for custom functionality -->
+    <script src="custom.js"></script>
+  </body>
+
+  <script src="custom.js"></script>
+</html>

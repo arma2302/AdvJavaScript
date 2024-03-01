@@ -121,7 +121,7 @@
         <div id="to-do-wrapper">
           <div class="heading-box"><h1>To Do List</h1></div>
           <div class="input-box">
-            <input type="text" name="" id="AddtaskInp" placeholder="Add Something" />
+            <input type="text" name="" id="AddtaskInp" placeholder="Add Something" value="" />
             <button id="BtnAddTask">Add task</button>
           </div>
           <div id="task-wraapper">
@@ -139,12 +139,13 @@
     <!-- Script starts here -->
     <script>
       let BtnAddTask = document.getElementById("BtnAddTask");
+      let AddData = document.getElementById("AddtaskInp");
       BtnAddTask.addEventListener("click", function ToDoList() {
         // create div element
         let div = document.createElement("div");
         div.innerHTML = ` <div class="task-add-input">
               <input type="checkbox" name="" id="checkbox" />
-              <input type="text" id="task-inp" disabled />
+              <input type="text" id="task-inp"value="${AddData.value}" disabled />
 
               <button id="edit"onclick="edit(this)">Edit</button>
               <button id="dlt">Delete</button>
@@ -177,6 +178,11 @@
       let greet = () => {
         console.log("helo");
       };
+
+      let dlt = document.getElementById("dlt");
+      dlt.addEventListener("click", function dlt() {
+        document.querySelector("task-wrapper").remove(this);
+      });
     </script>
   </body>
 </html>

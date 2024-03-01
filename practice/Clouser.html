@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closures</title>
+  </head>
+  <body>
+    <p>Lexical Scoping: A function scope’s ability to access variables from the parent scope is known as lexical scope. We refer to the parent function’s lexical binding of the child function as “lexically binding.”</p>
+    <script>
+      // outer function
+      function Arma() {
+        let name = "arma";
+        // inner function
+        function deepak() {
+          let gender = "female";
+          function anurag() {
+            let age = "23";
+            console.log(name);
+            console.log(gender);
+            console.log(age);
+          }
+          anurag();
+        }
+        deepak();
+      }
+      Arma();
+    </script>
+  </body>
+</html>

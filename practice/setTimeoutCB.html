@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   outer function
+      //   function ouert() {
+      //     for (let i = 1; i <= 5; i++) {
+      //       //  set time out as inner function its lexical env is outer function
+
+      //       setTimeout(() => {
+      //         // arraow function in settimeout
+
+      //         console.log(i); // print i
+      //       }, i * 2000); // every i will be printed after 2 sec
+      //     }
+      //   }
+      //   ouert(); // outer function is called
+
+      function outer() {
+        for (var i = 1; i <= 5; i++) {
+          setTimeout(() => {
+            console.log(i);
+          }, i * 2000);
+        }
+      }
+      outer();
+    </script>
+  </body>
+</html>
