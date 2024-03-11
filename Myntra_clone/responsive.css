@@ -1,0 +1,94 @@
+@media (max-width: 1400px) {
+  .applestore {
+    display: flex;
+    width: 13%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .applestore {
+    display: flex;
+    width: 28%;
+  }
+}
+
+@media (max-width: 992px) {
+  .applestore {
+    display: flex;
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    gap: 0;
+  }
+  .nav-all li {
+    padding: 5px;
+  }
+  footer {
+    gap: 140px;
+    padding-left: 20px;
+  }
+  .applestore {
+    display: flex;
+    width: 35%;
+  }
+}
+@media (max-width: 576px) {
+  #nav-items {
+    position: absolute;
+    top: 119px;
+    background-color: aliceblue;
+    width: 348px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: start;
+    padding: 20px;
+    left: -100%;
+  }
+  .srch-bar {
+    display: none;
+  }
+  .nav-all {
+    flex-direction: column;
+  }
+  .bars {
+    display: block;
+  }
+  nav {
+    position: relative;
+    justify-content: space-between;
+  }
+  .all-icons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .discount {
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    gap: 30px;
+  }
+  /* .hide {
+    display: none;
+  } */
+}
+@media (max-width: 376px) {
+  .discount {
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    gap: 50px;
+    flex-direction: column;
+  }
+}

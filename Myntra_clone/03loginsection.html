@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Section</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: rgb(254, 228, 232); */
+      }
+
+      span {
+        color: rgb(244, 29, 100);
+        /* font: weight 6px; */
+        font-weight: 600;
+      }
+
+      .loginpage {
+        /* border: 2px solid black; */
+        width: 48%;
+        margin-left: 318px;
+        background-color: white;
+        margin-top: 30px;
+      }
+
+      .loginpage img {
+        width: 530px;
+        height: 180px;
+      }
+
+      .heading {
+        font-size: 25px;
+        margin-top: 20px;
+      }
+
+      input {
+        height: 44px;
+        width: 455px;
+        margin-top: 30px;
+      }
+
+      .continue-btn {
+        background-color: #ff3f6c;
+        color: white;
+        border: none;
+        height: 44px;
+        width: 455px;
+        margin-top: 25px;
+      }
+
+      .sec-2 {
+        margin-left: 40px;
+      }
+
+      p {
+        margin-top: 30px;
+      }
+
+      .sign-up {
+        color: gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="loginpage">
+      <div class="img">
+        <img src="../new-project/image/loginimg.webp" alt="" />
+      </div>
+
+      <div class="sec-2">
+        <div class="heading">
+          <b>Login</b>
+          <span class="sign-up">or</span>
+          <b>Signup</b>
+        </div>
+        <input type="text" placeholder=" Username " id="mnum" onblur="Mnum()" value="" />
+        <br />
+        <b id="error1"></b>
+        <p>By continuing, i agree to the <span>Tearms of Use</span>& <span>Privacy Police</span></p>
+        <button class="continue-btn" onclick="showuserdata()">CONTINUE</button>
+        <p>Have trouble logging in ? <span>Get help</span></p>
+      </div>
+    </div>
+
+    <script>
+      var mobile1 = document.getElementById("mnum");
+      var b2 = document.getElementById("error1");
+      console.log(mobile1.value);
+      function Mnum() {
+        if (mobile1.value == "") {
+          b2.innerHTML = "*required";
+          b2.innerHTML = "*please enter valid mobile number (10 digit)";
+
+          b2.style.color = "red";
+          mobile1.style.border = "2px solid red";
+          return false;
+        }
+      }
+
+      function showuserdata() {
+        let username = document.getElementById("mnum").value;
+
+        var userdata = { user: username };
+        localStorage.setItem("object_name", JSON.stringify(userdata));
+
+        console.log(userdata.user);
+        if (username != "") {
+          window.location.href = "index.html";
+        }
+      }
+    </script>
+  </body>
+</html>

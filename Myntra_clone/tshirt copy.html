@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myntra-Tshirts</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- stylesheet is added here -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- navbar starts from here -->
+    <nav>
+      <div class="logo">
+        <img src="Images/80601325.cms" alt="" />
+      </div>
+      <!-- <div class="navmobile"> -->
+      <div id="nav-items" class="hide">
+        <ul class="nav-all">
+          <li class="women">
+            <a href="#">Women</a>
+            <ul class="dropdown">
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">HandBags</a></li>
+              <li><a href="#">kurti</a></li>
+              <li><a href="#">Footwear</a></li>
+            </ul>
+          </li>
+          <li class="men">
+            <a href="#">Men</a>
+            <ul class="dropdown">
+              <li><a href="tshirt.html">Tshirt</a></li>
+              <li><a href="#">shirt</a></li>
+              <li><a href="#">jeans</a></li>
+              <li><a href="#">Footwear</a></li>
+            </ul>
+          </li>
+          <li class="kids">
+            <a href="#">Kids</a>
+            <ul class="dropdown">
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">Toys</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Footwear</a></li>
+            </ul>
+          </li>
+        </ul>
+        <!-- </div> -->
+        <div class="srch-bar">
+          <input type="text" name="" id="" placeholder=" Search for Products Brand and More" />
+        </div>
+      </div>
+      <!-- bars -->
+      <div class="all-icons">
+        <div class="bars">
+          <i class="fa-solid fa-bars" id="bars" onclick="showMenu()"></i>
+        </div>
+        <!-- icons wrapper -->
+        <div class="profile-wrapper">
+          <div class="profile-section">
+            <i class="fa-regular fa-user profile"></i>
+            <p class="pr">Profile</p>
+          </div>
+          <div class="profile-section">
+            <i class="fa-regular fa-heart profile"></i>
+            <p class="pr"><a href="wishlist.html" class="wishlist" target="_blank">Wishlist</a></p>
+          </div>
+          <div class="profile-section">
+            <i class="fa-solid fa-bag-shopping profile"></i>
+            <p class="pr">Bag</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends from here -->
+    <!-- Home page starts here -->
+
+    <div class="container">
+      <div class="flex-box">
+        <div class="container2">
+          <div class="arrange">
+            <div class="brand">
+              <div class="logo">
+                <h3>BRAND</h3>
+              </div>
+              <div class="material">
+                <input type="checkbox" name="company" id="RS" onclick="showCards('Roadster')" />
+                <label for="company">Roadster</label><br />
+
+                <input type="checkbox" name="company" onclick="showCards('Us.polo')" />
+                <label for="company"> Us.Polo</label><br />
+                <input type="checkbox" name="Size" onclick="showCards('max')" />
+                <label for="company"> Max</label><br />
+
+                <hr />
+              </div>
+            </div>
+            <div class="brand">
+              <div class="logo">
+                <h3>PRICE</h3>
+              </div>
+              <div class="range">
+                <input type="checkbox" name="price" onclick="showCardsPrice('100-500')" />
+                <label for="price"> Rs. 100 to Rs. 500</label><br />
+
+                <input type="checkbox" name="price" onclick="showCardsPrice('600-1000')" />
+                <label for="price">Rs. 600 to Rs. 1000</label><br />
+                <input type="checkbox" name="price" onclick="showCardsPrice('1000-1500')" />
+                <label for="price"> Rs. 1000 to Rs. 1500</label><br />
+
+                <hr />
+              </div>
+            </div>
+
+            <div class="size-chart">
+              <div class="logo">
+                <h3>SIZE</h3>
+              </div>
+              <div class="range">
+                <input type="checkbox" name="size" />
+                <label for="size"> XXL</label><br />
+                <input type="checkbox" name="size" />
+                <label for="size"> XL</label><br />
+                <input type="checkbox" name="size" />
+                <label for="size"> L</label><br />
+
+                <hr />
+              </div>
+            </div>
+          </div>
+
+          <!-- The row div is used for the main layout of elements inside the container -->
+        </div>
+        <div class="main-wrapper">
+          <div id="row" class="hidden"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Home page Ends Here -->
+    <!-- script is added here -->
+    <script src="main.js"></script>
+    <script>
+      let maincard = [
+        {
+          cardtitle: "max",
+          cardsubtitle: "rounded striptedd",
+          cardprice: "128 ",
+          cardImg: "images/card-img-1",
+          cardSize: "size S",
+        },
+        {
+          cardtitle: "Us.polo",
+          cardsubtitle: "men striptedd",
+          cardprice: "949 ",
+          cardImg: "images/card-img-2",
+        },
+        {
+          cardtitle: "Roaster",
+          cardsubtitle: "men short sleve polo tsirt",
+          cardprice: "1200 ",
+          cardImg: "images/card-img-3.webp",
+        },
+        {
+          cardtitle: "max",
+          cardsubtitle: "rounded neck lounge Tshirt",
+          cardprice: "198 ",
+          cardImg: "images/card-img-4.webp",
+        },
+        {
+          cardtitle: "Us.polo",
+          cardsubtitle: "pure Cotton LoungE Tshirt",
+          cardprice: "854 ",
+          cardImg: "images/card-img-2",
+        },
+        {
+          cardtitle: "Roadster",
+          cardsubtitle: "Men Solid LoungE Tshirt",
+          cardprice: "395 ",
+          cardImg: "images/card-img-6.webp",
+        },
+        {
+          cardtitle: "max",
+          cardsubtitle: "rounded neck lounge Tshirt",
+          cardprice: "198 ",
+          cardImg: "images/card-img-7.webp",
+        },
+        {
+          cardtitle: "Roadster",
+          cardsubtitle: "White solid sustainable Tshirt",
+          cardprice: "799 ",
+          cardImg: "images/card-img-8.webp",
+        },
+        {
+          cardtitle: "max",
+          cardsubtitle: "rounded neck lounge Tshirt",
+          cardprice: "198 ",
+          cardImg: "images/card-img-9.webp",
+        },
+        {
+          cardtitle: "DAMENSCH",
+          cardsubtitle: "Cotton Tank lounge Tshirt",
+          cardprice: "531 ",
+          cardImg: "images/card-img-10.webp",
+        },
+      ];
+      window.onload = function showpage() {
+        maincard.forEach((obj) => {
+          // row html class
+          let row = document.getElementById("row");
+          //  create div
+          let div = document.createElement("div");
+          // innerhtml of div
+          div.innerHTML = `
+                        <div class="card">
+
+                            <div class="wrapper card-img">
+                  <div class="wrapper-holder">
+                      <div><img src="${obj.cardImg}"></div>
+                      <div><img src="${obj.cardImg}" width="420px"></div>
+                      <div><img src="${obj.cardImg}" "></div>
+                      <div><img src="${obj.cardImg}" "></div>
+                  </div>
+              </div>
+                          <div class="card-body">
+                            <h3 class="title">${obj.cardtitle}</h3>
+                            <p class="sub-title">${obj.cardsubtitle}</p>
+                            <span class="pricing">Rs.${obj.cardprice}</span>
+                            </div>
+                            <div><buttton onclick="wish(this)">wishlist</button></div>
+                              </div>`;
+          // set div class to col-25
+          div.setAttribute("class", "w-25");
+          //  append div to row
+          row.appendChild(div);
+        });
+      };
+
+      //  filter
+      function showCards(cardTitle) {
+        // Filter the maincard array for objects with a cardtitle property equal to the specified value
+        let filteredCards = maincard.filter((card) => card.cardtitle === cardTitle);
+
+        // Remove all existing child elements from the row div
+        while (row.firstChild) {
+          row.removeChild(row.firstChild);
+        }
+
+        // Loop through the filtered maxOrRoadsterCards array and create a new div for each object
+        filteredCards.forEach((obj) => {
+          // Get the row div element
+
+          let row = document.getElementById("row");
+          // Create a new div element
+          let div = document.createElement("div");
+
+          // Set the div class to col-25
+          div.setAttribute("class", "w-25");
+
+          // Set the innerHTML of the div to the desired HTML template
+          div.innerHTML = `
+        <div class="card">
+          <div class="wrapper card-img">
+            <div class="wrapper-holder">
+              <div><img src="${obj.cardImg}"></div>
+              <div><img src="${obj.cardImg}" width="420px"></div>
+              <div><img src="${obj.cardImg}" "></div>
+              <div><img src="${obj.cardImg}" "></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="title">${obj.cardtitle}</h3>
+            <p class="sub-title">${obj.cardsubtitle}</p>
+            <span class="pricing">Rs.${obj.cardprice}</span>
+          </div>
+          <div><buttton onclick="wish(this)">wishlist</button></div>
+        </div>`;
+
+          // Append the div to the row
+          row.appendChild(div);
+        });
+      }
+
+      // filter cards Based onprice
+
+      function showCardsPrice(priceRange) {
+        // Filter the maincard array for objects with a cardtitle property equal to the specified value
+        let filteredCards = maincard.filter((obj) => obj.cardprice >= priceRange.split("-")[0] && obj.cardprice <= priceRange.split("-")[1]);
+
+        // Remove all existing child elements from the row div
+        while (row.firstChild) {
+          row.removeChild(row.firstChild);
+        }
+
+        // Loop through the filtered maxOrRoadsterCards array and create a new div for each object
+        filteredCards.forEach((obj) => {
+          // Get the row div element
+
+          let row = document.getElementById("row");
+          // Create a new div element
+          let div = document.createElement("div");
+
+          // Set the div class to col-25
+          div.setAttribute("class", "w-25");
+
+          // Set the innerHTML of the div to the desired HTML template
+          div.innerHTML = `
+        <div class="card">
+          <div class="wrapper card-img">
+            <div class="wrapper-holder">
+              <div><img src="${obj.cardImg}"></div>
+              <div><img src="${obj.cardImg}" width="420px"></div>
+              <div><img src="${obj.cardImg}" "></div>
+              <div><img src="${obj.cardImg}" "></div>
+            </div>
+          </div>
+          <div class="card-body">
+            <h3 class="title">${obj.cardtitle}</h3>
+            <p class="sub-title">${obj.cardsubtitle}</p>
+            <span class="pricing">Rs.${obj.cardprice}</span>
+          </div>
+          <div><buttton onclick="wish(this)">wishlist</button></div>
+        </div>`;
+
+          // Append the div to the row
+          row.appendChild(div);
+        });
+      }
+    </script>
+  </body>
+</html>

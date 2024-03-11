@@ -63,23 +63,7 @@ let card10 = {
 };
 
 // Array to store all the cards data
-let maincard = [
-  card1,
-  card2,
-  card3,
-  card4,
-  card5,
-  card6,
-  card7,
-  card8,
-  card9,
-  {
-    cardtitle: "DAMENSCH",
-    cardsubtitle: "Cotton Tank lounge Tshirt",
-    cardprice: "531 ",
-    cardImg: "card-img-10.webp",
-  },
-];
+let maincard = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10];
 
 // loop
 function showpagw1() {

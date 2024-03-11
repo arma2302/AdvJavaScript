@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            margin: 100px 0px 0px 50px;
+        }
+
+        #card_wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .wrapper {
+            width: 420px;
+            height: 500px;
+            /* box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.6); */
+            overflow: hidden;
+        }
+
+        .wrapper-holder {
+            display: grid;
+            grid-template-columns: repeat(4, 100%);
+            height: 100%;
+            width: 100%;
+        }
+
+        .wrapper-holder:hover {
+            animation: slider 10s ease-in-out infinite alternate;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        @keyframes slider {
+            0% {
+                transform: translateX(0%);
+            }
+
+            10% {
+                transform: translateX(-100%);
+            }
+
+            20% {
+                transform: translateX(-100%);
+            }
+
+            30% {
+                transform: translateX(-200%);
+            }
+
+            40% {
+                transform: translateX(-200%);
+            }
+
+            50% {
+                transform: translateX(-200%);
+            }
+
+            60% {
+                transform: translateX(-300%);
+            }
+
+            70% {
+                transform: translateX(-300%);
+            }
+
+            80% {
+                transform: translateX(-300%);
+            }
+
+            90% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+<div id="card_wrapper">
+</div>
+<script>
+    let card_wrapper = document.getElementById('card_wrapper');
+
+    let arrp = ['The Indian Cargo', 'mast&herbour', 'roadster']
+    let slid_img_1 = ['tshirt-.jpeg', 'tshirt-1.jpeg', 'tshirt-2.jpeg']
+    let slid_img_2 = ['tshirt-1.jpeg', 'tshirt-2.jpeg', 'tshirt-3.jpeg']
+    let slid_img_3 = ['tshirt-2.jpeg', 'tshirt-3.jpeg', 'tshirt-4.jpeg']
+    let slid_img_4 = ['tshirt-3.jpeg', 'tshirt-4.jpeg', 'tshirt-.jpeg']
+    let arrp2 = ['Men Slim Fit Casual Shirt', 'Men Regular Fit Sustainable Casual Shirt', 'Men Cotton Casual Shirt', 'Printed Slim Fit Casual Shirt', 'Men Cotton Casual Shirt', 'Men Slim Fit Casual Shirt', 'Men Regular Fit Sustainable Casual Shirt', 'Men Cotton Casual Shirt', 'Printed Slim Fit Casual Shirt', 'Men Cotton Casual Shirt',];
+    let arrp3 = [
+        649, 749, 1469, 899, 699, 499, 1899, 669, 2400, 9999
+    ];
+    let arrp4 = [
+        749, 849, 1569, 999, 799, 599, 1999, 769, 2500, 11999
+    ];
+    let count = 0;
+
+    arrp.forEach(element => {
+
+        let cards = document.createElement('div');
+
+        let card1 = `<div class="container">
+        <div class="wrapper">
+            <div class="wrapper-holder">
+                <div><img src="${slid_img_1[count]}" width="420px"></div>
+                <div><img src="${slid_img_2[count]}" width="420px"></div>
+                <div><img src="${slid_img_3[count]}" width="420px"></div>
+                <div><img src="${slid_img_4[count]}" width="420px"></div>
+            </div>
+        </div>
+        <p>${element}</p>
+        <p>${arrp2[count]}</p>
+        <p>${arrp3[count]}&nbsp;&nbsp;<strike>${arrp4[count]}</strike></p>
+    </div>`;
+        count++;
+        //  card1.className='main';
+        cards.innerHTML = card1;
+        card_wrapper.appendChild(cards);
+
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<script>
+  let selectedCardKey = `selectedCard-${location.search.split("=")[1]}`;
+  let selectedCard = JSON.parse(localStorage.getItem(selectedCardKey));
+
+  let cardTemplate = `
+        <div class="card-item" data-obj='{{cardObj}}'>
+          <div class="card-img">
+            <img src="{{image}}" alt="{{title}}">
+          </div>
+          <div class="card-info">
+            <h3 class="title">{{title}}</h3>
+            <h4 class="sub-title">{{subtitle}}</h4>
+            <h4 class="pricing">{{price}}</h4>
+          </div>`;
+  let cardHtml = cardTemplate;
+
+  let row = document.querySelector(".row");
+  row.insertAdjacentHTML("beforeend", cardHtml);
+</script>
+<!-- wish -->
+<script>
+  function wish() {
+    maincard.forEach((obj) => {
+      let div = document.createElement("div");
+      div.className = "w-25";
+      div.setAttribute("data-obj", JSON.stringify(maincard.obj));
+      div.innerHTML = `
+          <div class="card">
+            <div class="card-img"><img src="${obj.cardImg}" alt="" /></div>
+            <div class="card-body">
+              <h3 class="title">${obj.cardtitle}</h3>
+              <p class="sub-title">${obj.cardsubtitle}</p>
+              <span class="pricing">Rs.${obj.cardprice}</span>
+              </div>
+              <div><button class="wishlist-button" onclick=wish()>Add to Wishlist</button></div>
+                </div>`;
+      document.getElementById("row").appendChild(div);
+    });
+    console.log(true);
+  }
+  // wish();
+</script>

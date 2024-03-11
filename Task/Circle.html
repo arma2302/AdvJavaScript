@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let arr = [10, 20, 2, 4, 8];
+      //   for (i = 0; i <= arr.length - 1; i++) {
+      //     function circle(Diemeter) {
+      //       return i * Diemeter ** 2;
+      //     }
+      //     console.log("Area of the circles:" + circle(arr[i]));
+      //   }
+
+      // diemeter,area, circumfarnces of circle
+
+      let array = [2, 4, 6, 8];
+      let pie = 3.14;
+      for (let i = 0; i <= array.length - 1; i++) {
+        //  main function
+        function circle(circumfarnces, area, diemeter) {
+          let result = [`circumference of ${array[i]} is ${circumfarnces(a)}`, `Area of ${array[i]} is ${area(a)}`, `Diemeter of ${array[i]} is ${diemeter(a)}`];
+          console.log(result);
+        }
+
+        // circumference function find out the area by using formula
+        function circumference(a) {
+          return 4 * a;
+        }
+
+        // function  to find out the area by using formula: Area
+        function area(a) {
+          return pie * a * a;
+        }
+
+        // function  to find out the diemeter by using formula
+        function diemeter(a) {
+          return 2 * a;
+        }
+        a = array[i];
+        circle(circumference, area, diemeter);
+      }
+    </script>
+  </body>
+</html>
+
+<!-- // let resultDiemeter = "diemeter of " + `${array[i]}` + " is " + diemeter(c); -->

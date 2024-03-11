@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myntra</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- stylesheet is added here -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+  </head>
+  <body>
+    <!-- navbar starts from here -->
+    <nav>
+      <div class="logo">
+        <img src="Images/80601325.cms" alt="" />
+      </div>
+      <!-- <div class="navmobile"> -->
+      <div id="nav-items" class="hide">
+        <ul class="nav-all">
+          <li class="women">
+            <a href="#">Women</a>
+            <ul class="dropdown">
+              <li><a href="#">Tops</a></li>
+              <li><a href="#">HandBags</a></li>
+              <li><a href="#">kurti</a></li>
+              <li><a href="#">Footwear</a></li>
+            </ul>
+          </li>
+          <li class="men">
+            <a href="#">Men</a>
+            <ul class="dropdown">
+              <li><a href="tshirt.html" target="_blank">Tshirt</a></li>
+              <li><a href="#" target="_blank">shirt</a></li>
+              <li><a href="#" target="_blank">jeans</a></li>
+              <li><a href="#" target="_blank">Footwear</a></li>
+            </ul>
+          </li>
+          <li class="kids">
+            <a href="#">Kids</a>
+            <ul class="dropdown">
+              <li><a href="#" target="_blank">Tops</a></li>
+              <li><a href="#" target="_blank">Toys</a></li>
+              <li><a href="#" target="_blank">Bottoms</a></li>
+              <li><a href="#" target="_blank">Footwear</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Beauty</a></li>
+          <li><a href="#">Studio</a></li>
+        </ul>
+        <!-- </div> -->
+        <div class="srch-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" name="" id="" placeholder=" Search for Products Brand and More" />
+        </div>
+      </div>
+      <!-- bars -->
+      <div class="all-icons">
+        <div class="bars">
+          <i class="fa-solid fa-bars" id="bars" onclick="showMenu()"></i>
+        </div>
+        <!-- icons wrapper -->
+        <div class="profile-wrapper">
+          <div class="profile-section">
+            <i class="fa-regular fa-user profile"></i>
+            <div class="pr relative">
+              <a href="#">profile</a>
+            </div>
+            <div class="profile_wrapper">
+              <h2 id="username">Hello <span id="user">User</span></h2>
+              <a href="03loginsection.html" target="_blank" id="login">Login</a>
+            </div>
+          </div>
+
+          <div class="profile-section">
+            <i class="fa-regular fa-heart profile"></i>
+            <p class="pr">
+              <a href="wishlist.html" class="wishlist" target="_blank">Wishlist <span id="wishcount"></span></a>
+            </p>
+          </div>
+          <div class="profile-section">
+            <i class="fa-solid fa-bag-shopping profile"></i>
+            <p class="pr"><a href="04payment.html" target="_blank">Bag</a></p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends from here -->
+    <!-- Home page starts here -->
+
+    <div class="flat5">
+      <img src="images/sale.webp" alt="" />
+    </div>
+
+    <div class="birthday">
+      <div><img src="images/bdy1.jpg" alt="" /></div>
+      <div><img src="images/bdy2.jpg" alt="" /></div>
+    </div>
+
+    <div class="coupons">
+      <img src="images/coupnes.webp" alt="" />
+
+      <div class="discount">
+        <img src="images/code1.webp" alt="" />
+        <img src="images/code2.webp" alt="" />
+      </div>
+    </div>
+    <hr />
+    <div class="online">
+      <footer>
+        <div>
+          <ul>
+            <li>OnlineShopping</li>
+          </ul>
+          <ol>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">Kids</a></li>
+            <li><a href="">Home </a></li>
+            <li><a href="">Beauty</a></li>
+            <li><a href="">GiftCards</a></li>
+            <li><a href="">Myntrainsider</a></li>
+          </ol>
+        </div>
+        <div>
+          <ul>
+            <li>CustomerPolices</li>
+          </ul>
+          <ol>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">T&C</a></li>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Track orders</a></li>
+            <li><a href="">Shipping</a></li>
+            <li><a href="">Cancellation</a></li>
+          </ol>
+        </div>
+
+        <div>
+          <ul>
+            <li>Experience Myntra App on Mobile</li>
+          </ul>
+          <div class="applestore">
+            <img src="images/googleplay.png" alt="" />
+            <img src="images/appstore.png" alt="" />
+          </div>
+
+          <ul>
+            <li>Keep in touch</li>
+          </ul>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Home page Ends Here -->
+    <!-- script is added here -->
+    <script src="main.js"></script>
+  </body>
+</html>
